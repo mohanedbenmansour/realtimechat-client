@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "realtimechat-server"
+    }
+  },
+  "defaultProject": "realtimechat-server",
+  "cli": {
+    "analytics": false
+  }
 }
