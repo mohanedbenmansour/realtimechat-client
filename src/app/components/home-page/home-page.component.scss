@@ -1,0 +1,16 @@
+.container {
+  border: 1px solid yellow;
+  border-radius: 10px;
+  width: 50%;
+  height: 600px;
+  padding: 20px;
+}
+/* Styles for tab labels */
+.mat-tab-label {
+  color: white;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  color: white;
+}

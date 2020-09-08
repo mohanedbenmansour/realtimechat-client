@@ -1,1 +1,35 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary" class=".navbar">
+  <h1>E Shop</h1>
+  <div class="spacer"></div>
+
+  <span *ngIf="Role == 'MERCHANT'">
+    <a mat-button routerLink="/merchantPage/messages" routerLinkActive="active"
+      >messages</a
+    >
+    <a mat-button routerLink="/merchantPage" routerLinkActive="active"
+      >add post</a
+    >
+    <a mat-button routerLink="/merchantPage/myposts" routerLinkActive="active"
+      >view post</a
+    >
+  </span>
+
+  <span *ngIf="Role == 'CLIENT'">
+    <a mat-button routerLink="/clientPage/messages" routerLinkActive="active"
+      >messages</a
+    >
+    <a mat-button routerLink="/clientPage" routerLinkActive="active"
+      >view posts</a
+    >
+  </span>
+
+  <span *ngIf="Role == 'ADMIN'">
+    <a mat-button routerLink="/admin/viewusers" routerLinkActive="active"
+      >users</a
+    >
+    <a mat-button routerLink="/admin/viewposts" routerLinkActive="active"
+      >posts</a
+    >
+  </span>
+  <a mat-button (click)="logout()">Logout</a>
+</mat-toolbar>

@@ -1,0 +1,36 @@
+nav {
+  z-index: 0;
+
+  padding: 10px;
+}
+nav ul {
+  list-style-type: none;
+  float: right;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  color: white;
+  padding: 0 30px;
+  z-index: 1;
+  cursor: pointer;
+}
+.navbar {
+  justify-content: space-between;
+}
+
+span {
+  padding-right: 1rem;
+}
+mat-card {
+  margin: 30px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}

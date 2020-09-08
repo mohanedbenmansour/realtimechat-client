@@ -1,0 +1,26 @@
+<table class="table table-dark container">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">role</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let user of users">
+    <tr *ngIf="user._id != adminId">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="DeleteUser(user._id)"
+        >
+          delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

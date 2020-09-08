@@ -1,1 +1,27 @@
-<p>sign-in works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm)">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input placeholder="Email" type="email" matInput formControlName="email" />
+    <!-- <mat-error *ngIf="email.invalid && email.touched">
+      invalid email
+    </mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      placeholder="Password"
+      type="password"
+      matInput
+      formControlName="password"
+    />
+  </mat-form-field>
+
+  <button mat-button color="accent" type="submit">Submit</button>
+
+  <mat-error *ngIf="!profileForm.valid && submitted"
+    >check your email and password!!</mat-error
+  >
+
+  <mat-error *ngIf="serverErrorMessages">user not found</mat-error>
+</form>

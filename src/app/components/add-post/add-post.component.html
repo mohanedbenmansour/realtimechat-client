@@ -1,0 +1,31 @@
+<div class="container text-center">
+  <h1 class="mt-5">ADD Post</h1>
+  <form
+    #addPostForm="ngForm"
+    (ngSubmit)="addPostForm.valid && onSubmit(addPostForm)"
+    class="mt-5"
+  >
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="postService.selectedPost.description"
+        name="description"
+        placeholder="Description"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="postService.selectedPost.price"
+        name="price"
+        placeholder="Price"
+      />
+    </mat-form-field>
+
+    <button mat-button type="submit">Submit</button>
+  </form>
+</div>
